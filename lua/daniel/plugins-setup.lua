@@ -33,7 +33,19 @@ return packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  use("bluz71/vim-nightfly-guicolors")
+  -- Lua
+
+  use({
+    "olivercederborg/poimandres.nvim",
+    config = function()
+      require("poimandres").setup({
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+      })
+    end,
+  })
+
   use("marko-cerovac/material.nvim")
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
@@ -112,4 +124,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-
