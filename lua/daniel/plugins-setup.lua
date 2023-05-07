@@ -30,23 +30,10 @@ end
 return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
+  use("tanvirtin/monokai.nvim")
+  use("AlexvZyl/nordic.nvim")
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
-  -- Lua
-
-  use({
-    "olivercederborg/poimandres.nvim",
-    config = function()
-      require("poimandres").setup({
-        -- leave this setup function empty for default config
-        -- or refer to the configuration section
-        -- for configuration options
-      })
-    end,
-  })
-
-  use("marko-cerovac/material.nvim")
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -119,6 +106,23 @@ return packer.startup(function(use)
 
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+  use("tpope/vim-fugitive")
+
+  -- vim-go
+  use("fatih/vim-go")
+
+  -- Lua
+  use({
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      })
+    end,
+  })
 
   if packer_bootstrap then
     require("packer").sync()

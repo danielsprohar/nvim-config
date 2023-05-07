@@ -14,9 +14,3 @@ require("daniel.plugins.lsp.null-ls")
 require("daniel.plugins.autopairs")
 require("daniel.plugins.treesitter")
 require("daniel.plugins.gitsigns")
-
-local foldmethod_status, _ = pcall(vim.cmd, "set foldmethod=syntax")
-if not foldmethod_status then
-  print("Error: unable to set the fold method")
-  return
-end

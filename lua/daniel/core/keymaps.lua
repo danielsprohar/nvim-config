@@ -11,8 +11,12 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
-keymap.set("n", "<leader>ct", ':lua require("material.functions").find_style()<CR>')
 keymap.set("n", "<leader>tf", "za")
+keymap.set("n", "<leader>j", ":bn<CR>")
+keymap.set("n", "<leader>k", ":bp<CR>")
+keymap.set("n", "<leader>g", ":Git<CR>")
+keymap.set("n", "<leader>gc", ":Git commit<CR>")
+keymap.set("n", "<leader>gp", ":Git push<CR>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -41,6 +45,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+keymap.set("n", "<leader>o", ":NvimTreeFocus<CR>") -- focus file explorer
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -57,3 +62,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>")
+
+-- to-do
+keymap.set("n", "<leader>td", ":TodoTelescope<CR>")

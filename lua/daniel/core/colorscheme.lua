@@ -1,56 +1,10 @@
-pcall(vim.cmd, "colorscheme poimandres")
+vim.cmd("colorscheme monokai")
 
--- vim.g.material_style = "darker"
---
--- require("material").setup({
---   contrast = {
---     terminal = false,
---     sidebars = false,
---     floating_windows = false,
---     cursor_line = false,
---     non_current_windows = false,
---   },
---   plugins = { -- Uncomment the plugins that you use to highlight them
---     -- Available plugins:
---     -- "dap",
---     -- "dashboard",
---     "gitsigns",
---     -- "hop",
---     -- "indent-blankline",
---     "lspsaga",
---     -- "mini",
---     -- "neogit",
---     -- "neorg",
---     "nvim-cmp",
---     -- "nvim-navic",
---     "nvim-tree",
---     "nvim-web-devicons",
---     -- "sneak",
---     "telescope",
---     -- "trouble",
---     -- "which-key",
---   },
---   disable = {
---     colored_cursor = true,
---     borders = false,
---     background = false,
---     term_colors = false,
---     eob_lines = false,
---   },
---   high_visibility = {
---     lighter = false,
---     darker = true,
---   },
---   lualine_style = "default",
---   async_loading = true,
--- })
---
--- local status, _ = pcall(vim.cmd, "colorscheme material")
--- if not status then
---   print("Material colorscheme not found. Colorscheme set to nightfly.")
---   vim.cmd("colorscheme poimandres")
---   return
--- end
---
--- vim.g.material_style = "deep ocean"
---
+local status, monokai = pcall(require, "monokai")
+if not status then
+  return
+end
+
+monokai.setup({
+  italics = false,
+})
