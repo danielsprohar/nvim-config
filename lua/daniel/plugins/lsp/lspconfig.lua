@@ -35,8 +35,8 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
   keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
   keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-  -- keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
-  -- keymap("n", "<leader>bb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
+  keymap.set("n", "<leader>so", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
+  keymap.set("n", "<leader>bb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
 
   -- typescript specific keymaps (e.g. rename file and update imports)
   if client.name == "tsserver" then
@@ -117,17 +117,18 @@ lspconfig["lua_ls"].setup({
 })
 
 lspconfig["angularls"].setup({})
+lspconfig["clangd"].setup({})
 
-lspconfig["gopls"].setup({
-  on_attach = on_attach,
-  cmd = { "gopls", "serve" },
-  filetypes = { "go", "gomod", "mod" },
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-    },
-  },
-})
+-- lspconfig["gopls"].setup({
+--   on_attach = on_attach,
+--   cmd = { "gopls", "serve" },
+--   filetypes = { "go", "gomod", "mod" },
+--   settings = {
+--     gopls = {
+--       analyses = {
+--         unusedparams = true,
+--       },
+--       staticcheck = true,
+--     },
+--   },
+-- })

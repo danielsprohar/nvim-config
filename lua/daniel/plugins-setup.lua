@@ -31,7 +31,6 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
   use("tanvirtin/monokai.nvim")
-  use("AlexvZyl/nordic.nvim")
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
@@ -105,7 +104,6 @@ return packer.startup(function(use)
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
   -- git integration
-  use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
   use("tpope/vim-fugitive")
 
   -- vim-go
