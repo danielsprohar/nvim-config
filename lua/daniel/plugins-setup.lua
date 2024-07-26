@@ -30,8 +30,11 @@ end
 return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
+
+  -- themes
   use("tanvirtin/monokai.nvim")
-  use("AlexvZyl/nordic.nvim")
+  use("Mofiqul/vscode.nvim")
+  use("sainnhe/gruvbox-material")
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 

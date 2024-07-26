@@ -1,3 +1,4 @@
+pack/
 # Compiled Lua sources
 luac.out
 

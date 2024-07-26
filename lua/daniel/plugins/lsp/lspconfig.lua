@@ -118,16 +118,21 @@ lspconfig["lua_ls"].setup({
 
 lspconfig["angularls"].setup({})
 
-lspconfig["gopls"].setup({
+lspconfig["clangd"].setup({
   on_attach = on_attach,
-  cmd = { "gopls", "serve" },
-  filetypes = { "go", "gomod", "mod" },
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-    },
-  },
+  capabilities = capabilities,
+  cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
 })
+-- lspconfig["gopls"].setup({
+--   on_attach = on_attach,
+--   cmd = { "gopls", "serve" },
+--   filetypes = { "go", "gomod", "mod" },
+--   settings = {
+--     gopls = {
+--       analyses = {
+--         unusedparams = true,
+--       },
+--       staticcheck = true,
+--     },
+--   },
+-- })
