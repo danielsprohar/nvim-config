@@ -1,7 +1,5 @@
 require("daniel.plugins-setup")
-require("daniel.core.options")
-require("daniel.core.keymaps")
-require("daniel.core.colorscheme")
+require("daniel.core")
 require("daniel.plugins.comment")
 require("daniel.plugins.nvim-tree")
 require("daniel.plugins.lualine")
