@@ -11,9 +11,9 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
-keymap.set("n", "<leader>tf", "za")
-keymap.set("n", "<leader>j", ":bn<CR>")
-keymap.set("n", "<leader>k", ":bp<CR>")
+keymap.set("n", "<leader>tf", "za") -- toggle the fold under the cursor
+keymap.set("n", "<leader>j", ":bn<CR>") -- next buffer
+keymap.set("n", "<leader>k", ":bp<CR>") -- previous buffer
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
