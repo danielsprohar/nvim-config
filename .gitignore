@@ -2,6 +2,7 @@ pack/
 # Compiled Lua sources
 luac.out
 
+.DS_Store
 
 # luarocks build files
 *.src.rock
