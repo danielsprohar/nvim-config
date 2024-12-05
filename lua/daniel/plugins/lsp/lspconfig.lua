@@ -85,9 +85,8 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["angularls"] = function()
-        -- configure svelte server
-        lspconfig["angularls"].setup({
+      ["clangd"] = function()
+        lspconfig["clangd"].setup({
           capabilities = capabilities,
         })
       end,
@@ -125,4 +124,3 @@ return {
     })
   end,
 }
-

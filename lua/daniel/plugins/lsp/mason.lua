@@ -27,6 +27,7 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
+        "clangd",
         "ts_ls",
         "html",
         "cssls",
@@ -35,7 +36,6 @@ return {
         "graphql",
         "emmet_ls",
         "pyright",
-        "angularls",
       },
     })
 

@@ -11,11 +11,14 @@ return {
 
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
+      sync_install = false,
       highlight = {
         enable = true,
       },
       -- enable indentation
-      indent = { enable = true },
+      indent = {
+        enable = true,
+      },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
       autotag = {
         enable = true,
@@ -32,7 +35,6 @@ return {
         "prisma",
         "markdown",
         "markdown_inline",
-        "svelte",
         "graphql",
         "bash",
         "lua",
@@ -42,6 +44,7 @@ return {
         "query",
         "vimdoc",
         "c",
+        "php",
       },
       incremental_selection = {
         enable = true,
