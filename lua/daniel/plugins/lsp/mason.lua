@@ -33,9 +33,9 @@ return {
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "graphql",
         "emmet_ls",
         "pyright",
+        "gopls",
       },
     })
 
